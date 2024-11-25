@@ -1,15 +1,17 @@
-
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DesignBoxes from './components/DesignBoxes/DesignBoxes';
-import { GlobalStyles } from './components/styles/globalStyles';
+import TestDetails from "./components/TestDetails/TestDetails";
 
-const App =() => {
+const App = () => {
   return (
-    <>
-    <GlobalStyles/>
-    <DesignBoxes/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DesignBoxes />} />
+        <Route path="/tests/:category" element={<TestDetails />} />
+      </Routes>
+    </Router>
   );
 };
 
-export default App
+export default App;
