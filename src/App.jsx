@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DesignBoxes from './components/DesignBoxes/DesignBoxes';
 import TestDetails from "./components/TestDetails/TestDetails";
+import InstructionPage from './components/InstructionPage/InstructionPage';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<DesignBoxes />} />
         <Route path="/tests/:category" element={<TestDetails />} />
+        <Route path="/instructions/:testId" element={<InstructionPage />} />
       </Routes>
     </Router>
   );

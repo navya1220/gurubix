@@ -8,7 +8,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -17,6 +21,11 @@ export const ContentWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 15px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -26,12 +35,22 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   border-bottom: 2px solid #ddd;
   padding-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+  }
 `;
 
 export const TestList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 export const TestItem = styled.li`
@@ -50,24 +69,42 @@ export const TestItem = styled.li`
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
 `;
 
 export const TestInfo = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const TestName = styled.h3`
   font-size: 18px;
   color: #555;
   margin: 0 0 5px 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const TestDetailsText = styled.p`
   font-size: 14px;
   color: #888;
   margin: 2px 0;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const TestIcon = styled.div`
@@ -81,4 +118,11 @@ export const TestIcon = styled.div`
   margin-right: 15px;
   font-size: 18px;
   color: #00796b;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
 `;
